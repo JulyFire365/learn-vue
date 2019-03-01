@@ -1,0 +1,39 @@
+1.slice用法，返回截取的一段数据，有两个参数，不改变原来的数组，参数-1代表倒数第一个，-2代表倒数第二个，依次类推。
+ex: let arr = ["how","many","girlfriends","do","you","have"];
+    let sArr = arr.slice(2,5);
+    console.log(sArr); / ["girlfriends","do","you","have"];
+    
+2.splice用法，返回删除/新增后的数组，有三个参数，改变原来的数组
+ex: let arr = ["how","many","girlfriends","do","you","have"];
+    arr.splice(3,1,"did");
+    console.log(arr); / ["how","many","girlfriends","did","you","have"];
+    
+3.sort排序
+let oLetter = [{"name":"B"},{"name":"J"},{"name":"n"},{"name":"a"}]; 让数组按字母顺序排列
+
+oLetter.sort(function(s,t){
+  if(s.name.toLowerCase() < t.name.toLowerCase()) return -1;
+  if(s.name.toLowerCase() > t.name.toLowerCase()) return 1 
+  else{
+    return 0;
+  }
+})
+
+4.Css中Animation平移动画：
+.cell {
+  width: 200px;
+  height: 200px;
+  background: #0000000;
+  transition: width ease 2s;
+}
+
+.cell:hover {width: 400px}
+
+移动DOM
+.cell1 {
+  width: 400px; height: 400px; transform: translate(20px,70px)
+}
+
+5.透明度
+opacity: 0.4
+filter: Alpha(opacity=40)
