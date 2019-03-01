@@ -1,0 +1,22 @@
+1.什么是vue的生命周期？
+An:vue实例从创建到销毁的过程，从数据初始化 - 加载 - 挂载DOM->渲染 - 更新->渲染 - 卸载的一系列过程，我们称之为vue的生命周期。
+
+2.vue的生命周期分为哪几个阶段？
+An:分为八个阶段，创建前后/加载前后/更新前后/销毁前后
+
+3.vue的渲染机制是什么？
+An: 通过劫持订阅者消息-发布者消息的方式，当把一个js对象传给data属性的时候，object.defineProperity()会遍历属性的所有值，
+当数据发生改变时，触发监听回调，告知发布者。 MVVM通过observe,compile,watcher, observe就是数据，compile是视图模板，watcher成为两者的通信桥梁。
+
+4.vue-mixins是什么？
+An: 是一种组件的混入方式，合并两个或者多个组件。
+当对象或钩子函数重复时，以数组的方式结合，依次执行。当数据名称发生冲突时，以执行混入的组件为主。
+
+5.什么是vue-router?
+An：vue的路由管理器，与vue核心高度结合，非常适合开发单页应用（SPA）,包含的组件类型有<router-view></router-view>,<router-link to=""></router-link>
+import引入之后需要声明vue.use(vueRouter)
+
+6.什么是vuex?
+An： vue的状态管理工具，对象可以是{}或者函数，只用来读取的状态存放在store中，状态变更应写在mutation中，异步请求写在action中。
+
+
