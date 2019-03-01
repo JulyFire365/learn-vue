@@ -1,3 +1,5 @@
+
+
 1.slice用法，返回截取的一段数据，有两个参数，不改变原来的数组，参数-1代表倒数第一个，-2代表倒数第二个，依次类推。
 ex: let arr = ["how","many","girlfriends","do","you","have"];
     let sArr = arr.slice(2,5);
