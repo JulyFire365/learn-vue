@@ -37,3 +37,29 @@ oLetter.sort(function(s,t){
 5.透明度
 opacity: 0.4
 filter: Alpha(opacity=40)
+
+6.JS发起后台请求的方式
+var xml = new XMLHttpRequest();
+    xml.open("POST","url");
+    xml.send(data);
+    xml.onreadystatechange = function(data){
+        if(data.readyState == 4 || data.status == 200){
+            //success
+        }else{
+            //fail
+        }
+    }
+    
+6.http协议工作原理
+http是超本文传输协议，可以输出html到客户端浏览器，实现web服务端和客户端的通信，
+输入url后， 协议名称 主域名 端口
+http开始把主域名解析成ip地址
+客户端像服务端发起请求
+服务端返回信息
+服务端关闭连接
+
+7.什么是跨域，解决方法
+浏览器有基本javascript的同源策略的限制，协议名 主域名 端口号 一样不同都会导致跨域 
+可以通过script标签 /图片的src /jsonp的callback回调/ iframe的 document.domain
+
+8.什么是闭包
