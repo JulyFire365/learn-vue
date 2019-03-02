@@ -1,0 +1,27 @@
+实现父子组件之间的传递
+
+<div id="app">
+  <ol>
+      <todo-list
+          v-for = "item in items"
+          v-bind:todo = item
+          v-bind:key = item.id
+      ></todo-list>
+  </ol>
+</div>
+
+Vue.component("todo-list",{
+  props: ["todo"],
+  template: "<li>{{todo.text}}</li>"
+})
+
+new Vue({
+  el: "#app",
+  data: {
+    items:［
+      {"id":1,"text":"苹果"}，
+      {"id":1,"text":"柿子"}，
+      {"id":1,"text":"说出你最喜欢的水果"}
+    ］
+  }
+})
