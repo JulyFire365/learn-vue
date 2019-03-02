@@ -100,3 +100,22 @@ var data = json.map(item=>{
     }
 })
 
+12.面向对象
+
+function Person(name,age){
+       this.name = name;
+       this.age = age;
+}
+
+Person.prototype = {
+    showName : function(){alert(this.name)},
+    showAge: function(){alert(this.age)}
+}
+
+var leo = new Person('leo',20);
+leo.showName()
+
+
+
+
+
