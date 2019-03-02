@@ -91,6 +91,12 @@ f2()可以访问f1里面的变量，这个f2就是闭包。
 
 10.$().find().sublings().end() end返回上一级DOM
 
-
-
+11. map方法  
+var data = json.map(item=>{
+    return {
+        name: item.name;
+        sex: item.sex === 1 ? "male" : item.sex === 0 ? "female" : "secret",
+        age: item.age
+    }
+})
 
