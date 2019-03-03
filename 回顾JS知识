@@ -115,7 +115,7 @@ Person.prototype = {
 var leo = new Person('leo',20);
 leo.showName()
 
-
+13.jQuery.extend()和jQuery.fn.extend()
 
 
 
