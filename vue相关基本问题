@@ -19,4 +19,41 @@ import引入之后需要声明vue.use(vueRouter)
 6.什么是vuex?
 An： vue的状态管理工具，对象可以是{}或者函数，只用来读取的状态存放在store中，状态变更应写在mutation中，异步请求写在action中。
 
+7.laravel + vue-cli 如何在webpack配置文件中获取根目录下.env文件中的常量
+An: npm install dotenv --save
+    进入 webpack-dev-config.js/vue-config.js
+    require('dotenv').config({path: filename})
+    const yourneed = process.env.DB_NAME (DB_NAME为.env中定义好的常量)
+    console.log(yourneed)
+    
+8. vuex: 
+An: 
+import vuex from 'vuex'
+import vue from 'vue 
+vue.use(vuex)
+
+const state = new vuex.Store({
+  state: {
+    name: "wong two cheng",
+    age: 30
+  },
+  mutations: {
+    nameChange: (state, name)=>{
+      state.name = name
+    },
+    ageChange: (state, age)=>{
+      state.age = age +1
+    }
+  },
+  actions: {
+    nameUpdate({commit},name){
+      commit("nameChange",name)
+    },
+    ageUpdate({commit},age){
+      commit("ageChange",age)
+    }
+  }
+})
+
+export default state
 
